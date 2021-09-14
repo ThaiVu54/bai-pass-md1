@@ -9,16 +9,21 @@
 </head>
 
 <body>
+
     <script>
         let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         let num = parseInt(prompt('nhập vào số cần tìm'));
+        let check = false;
 
         function seachNumber(number, array) {
             for (let i = 0; i < array.length; i++) {
                 if (number === array[i]) {
-                    alert('số cần tìm nằm trong mảng');
+                    check = true;
                 }
             }
+            if (check !== true) {
+                alert('không nằm trong mảng');
+            } else alert('nằm trong mảng');
         }
         seachNumber(num, array);
     </script>
